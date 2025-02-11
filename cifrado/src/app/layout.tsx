@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "./components/Nav";
+import { ArrayProvider } from "./context/ArrayContext.jsx";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -29,7 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nav />
-        {children}
+        <main className="w-full h-screen" >
+          <ArrayProvider>{children}</ArrayProvider>
+        </main>
       </body>
     </html>
   );
