@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "./components/Nav";
 import { ArrayProvider } from "./context/ArrayContext.jsx";
+import { PasswordProvider } from "./context/Password.jsx"; // Importa el nuevo contexto
 import "./globals.css";
 
 const geistSans = Geist({
@@ -31,7 +32,11 @@ export default function RootLayout({
       >
         <Nav />
         <main className="w-full h-screen" >
-          <ArrayProvider>{children}</ArrayProvider>
+          <ArrayProvider>
+            <PasswordProvider>
+              {children}
+            </PasswordProvider>
+          </ArrayProvider>
         </main>
       </body>
     </html>
