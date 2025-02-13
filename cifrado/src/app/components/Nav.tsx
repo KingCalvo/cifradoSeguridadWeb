@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+
+
 const Nav: React.FC = () => {
   return (
     <nav className="fixed top-3 w-full h-16 flex justify-center items-center z-50">

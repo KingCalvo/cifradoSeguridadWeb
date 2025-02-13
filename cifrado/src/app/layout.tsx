@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "./components/Nav";
 import { ArrayProvider } from "./context/ArrayContext.jsx";
-import { PasswordProvider } from "./context/Password.jsx"; // Importa el nuevo contexto
+import { PasswordProvider } from "./context/Password.jsx";
 import "./globals.css";
 
 const geistSans = Geist({
