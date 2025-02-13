@@ -1,6 +1,6 @@
 ## Para configurar el proyecto:
 
-### Para git pegar esto en terminal:
+### Para git pegar esto en terminal (Con sus datos):
 
 git config --global user.name "Enrique Calvo Garcia"
 git config --global user.email enriquecalvo75@gmail.com

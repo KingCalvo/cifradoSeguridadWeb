@@ -1,23 +1,25 @@
 "use client";
 
-import { createConPassword, useConPassword, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-const Password = createConPassword();
+// Crear el contexto correctamente
+const PasswordContext = createContext();
 
 export const PasswordProvider = ({ children }) => {
-  const [Password, setPassword] = useState("");
+  const [password, setPassword] = useState("");
 
   const updatePassword = (newPassword) => {
     setPassword(newPassword);
   };
 
   return (
-    <Password.Provider value={{ Password, updatePassword }}>
+    <PasswordContext.Provider value={{ password, updatePassword }}>
       {children}
-    </Password.Provider>
+    </PasswordContext.Provider>
   );
 };
 
+// Hook personalizado para usar el contexto
 export const usePassword = () => {
-  return useConPassword(Password);
+  return useContext(PasswordContext);
 };
