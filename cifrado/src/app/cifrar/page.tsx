@@ -3,7 +3,7 @@ import AsciiHexTable from "../components/AsciiHexTable";
 
 const Page: React.FC = () => {
   return (
-    <div>
+    <div className="mt-40">
       <AsciiHexTable />
     </div>
   );
