@@ -12,9 +12,11 @@ const Nav: React.FC = () => {
           <Link href="/cifrar">Cifrar</Link>
         </li>
         <li className="hover:text-white hover:text-xl transition-all transform">
+          <Link href="/decifrar">Desifrar</Link>
           <Link href="/descifrar">Descifrar</Link>
         </li>
         <li className="hover:text-white hover:text-xl transition-all transform">
+          <Link href="/hash">Hash</Link>
           <Link href="/hash">Hash</Link>
         </li>
       </ul>

@@ -21,7 +21,6 @@ function AsciiHexTable() {
     }
     setMessage(updatedMessage);
   };
-
   return (
     <div className="bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-3xl mx-auto text-white">
       <h2 className="text-center text-lg font-semibold mb-4">Visor de Bytes</h2>
@@ -32,7 +31,7 @@ function AsciiHexTable() {
           <div className="grid grid-cols-11 gap-1 text-center">
             {["#", ...Array.from({ length: 10 }, (_, i) => i)].map(
               (item, index) => (
-                <div key={index} className="font-bold bg-gray-700 p-1">
+                <div key={index} className="font-bold text-black bg-gray-200 p-1">
                   {item}
                 </div>
               )
@@ -121,5 +120,4 @@ function AsciiHexTable() {
     </div>
   );
 }
-
 export default AsciiHexTable;
